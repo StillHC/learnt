@@ -84,6 +84,39 @@ git remote add origin git@server-name:path/repo-name.git
 推送本地库中文件到服务器版本库。
 git push -u origin master 
 
+10.分支管理
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+
+
+
+两条指令合并：git checkout -b dev
+-b 表示创建并切换
+
+
+dev分支的工作完成，我们就可以切换回master分支
+git checkout master
+//Switched to branch 'master'
+
+
+把dev分支的工作成果合并到master分支上：
+git merge dev
+
+
+尚未缓存的改动：git diff
+查看已缓存的改动： git diff --cached
+查看已缓存的与未缓存的所有改动：git diff HEAD
+显示摘要而非整个 diff：git diff --stat
+
 
 
 
